@@ -4,7 +4,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
 import { X, SlidersHorizontal } from 'lucide-react';
 import type { Category } from '@/lib/types';
-import { formatCLP } from '@/lib/utils';
 
 interface FilterSidebarProps {
   categories: Category[];

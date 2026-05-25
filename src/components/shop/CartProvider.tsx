@@ -9,6 +9,6 @@ import CartDrawer from '@/components/shop/CartDrawer';
  */
 export default function CartProvider() {
   // Subscribing here ensures the drawer is always mounted
-  const _ = useCartStore((s) => s.isOpen);
+  useCartStore((s) => s.isOpen);
   return <CartDrawer />;
 }
