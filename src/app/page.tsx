@@ -2,21 +2,8 @@
 
 import { useState } from "react";
 import Countdown from "@/components/drop/Countdown";
-import ProductCard from "@/components/drop/ProductCard";
+import ProductCard, { Product } from "@/components/drop/ProductCard";
 import NotifyBar from "@/components/drop/NotifyBar";
-
-type Product = {
-  id: number;
-  nombre: string;
-  precio: number;
-  precioOriginal: number | null;
-  stock: number;
-  stockInicial: number;
-  vendidos: number;
-  imagen: string | null;
-  categoria: string;
-  talla: string;
-};
 
 const PRODUCTOS: Product[] = [
   {
