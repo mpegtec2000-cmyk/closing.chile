@@ -127,14 +127,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen py-16 px-4 md:px-8 max-w-5xl mx-auto">
       <header className="text-center mb-10">
-        <div className="inline-flex items-center text-[10px] md:text-xs font-bold tracking-widest uppercase bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+        <div className="inline-flex items-center text-[10px] md:text-xs font-original font-bold tracking-widest uppercase bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-red-500 mr-2 animate-pulse" />
           Drop Activo
         </div>
-        <h1 className="font-display text-5xl md:text-7xl text-white mb-4 tracking-wider drop-shadow-lg">
+        <h1 className="font-original font-extrabold text-5xl md:text-7xl text-white mb-4 tracking-wider drop-shadow-lg">
           DROP 001
         </h1>
-        <p className="text-white/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
+        <p className="font-original text-white/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
           Piezas únicas. Filtra lo que buscas y asegura tu prenda antes que se agote.
         </p>
       </header>

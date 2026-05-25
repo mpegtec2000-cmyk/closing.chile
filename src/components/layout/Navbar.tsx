@@ -57,9 +57,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group">
             <img 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="CLOSING Logo" 
-              className="h-10 md:h-12 w-auto object-contain brightness-90 group-hover:brightness-110 transition-all duration-300"
+              className="h-16 md:h-20 w-auto object-contain brightness-90 group-hover:brightness-110 transition-all duration-300 animate-pulse drop-shadow-xl"
             />
           </Link>
 
@@ -69,7 +69,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`relative px-3 py-1.5 text-[11px] font-medium tracking-[0.12em] uppercase transition-colors duration-200 group ${
+                className={`relative px-3 py-1.5 text-[11px] font-original font-bold tracking-[0.12em] uppercase transition-colors duration-200 group ${
                   link.sale
                     ? 'text-red-400 hover:text-red-300'
                     : link.highlight
@@ -163,9 +163,9 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-10">
                 <img 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="CLOSING Logo" 
-                  className="h-8 w-auto object-contain"
+                  className="h-12 w-auto object-contain animate-pulse drop-shadow-md"
                 />
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -187,7 +187,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`block py-3 text-sm font-medium tracking-widest uppercase border-b border-white/5 transition-colors ${
+                      className={`block py-3 text-sm font-original font-bold tracking-widest uppercase border-b border-white/5 transition-colors ${
                         link.sale
                           ? 'text-red-400'
                           : link.highlight

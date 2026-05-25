@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bebas_Neue, DM_Sans } from 'next/font/google';
+import { Bebas_Neue, DM_Sans, Syne } from 'next/font/google';
 import './globals.css';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Navbar from '@/components/layout/Navbar';
@@ -16,6 +16,12 @@ const bebasNeue = Bebas_Neue({
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
+});
+
+const syne = Syne({
+  subsets: ['latin'],
+  variable: '--font-syne',
   display: 'swap',
 });
 
@@ -49,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable}`}>
+    <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable} ${syne.variable}`}>
       <body className="font-body text-white antialiased relative">
         {/* Background Video */}
         <video

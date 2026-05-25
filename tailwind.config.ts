@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-display)', 'Bebas Neue', 'Impact', 'sans-serif'],
         body: ['var(--font-body)', 'DM Sans', 'system-ui', 'sans-serif'],
+        original: ['var(--font-syne)', 'sans-serif'],
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '1rem' }],
