@@ -50,11 +50,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable}`}>
-      <body className="font-body text-white antialiased">
-        <AnnouncementBar />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className="font-body text-white antialiased relative">
+        {/* Background Video */}
+        <video
+          src="/video-fondo.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed top-0 left-0 w-full h-full object-cover -z-10 brightness-50"
+        />
+        
+        <div className="relative z-0 flex flex-col min-h-screen">
+          <AnnouncementBar />
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <CartProvider />
       </body>
     </html>
