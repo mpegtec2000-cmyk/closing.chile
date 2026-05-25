@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Minus, Plus, ShoppingBag, ArrowRight, Trash2 } from 'lucide-react';
-import { useCartStore } from '@/lib/cart';
+import { useCartStore, type CartItem } from '@/lib/cart';
 import { formatCLP } from '@/lib/utils';
 
 export default function CartDrawer() {
@@ -151,7 +151,7 @@ function CartItemRow({
   onRemove,
   onUpdateQty,
 }: {
-  item: ReturnType<typeof useCartStore>['items'][number];
+  item: CartItem;
   onRemove: () => void;
   onUpdateQty: (qty: number) => void;
 }) {
