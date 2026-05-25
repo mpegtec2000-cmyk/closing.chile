@@ -12,6 +12,7 @@ export interface Product {
   stock: number;
   is_new: boolean;
   is_sale: boolean;
+  sizes_available?: string[];
   created_at: string;
 }
 
