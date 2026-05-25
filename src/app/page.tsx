@@ -1,5 +1,6 @@
 import HeroSection from '@/components/home/HeroSection';
 import CategoryNav from '@/components/home/CategoryNav';
+import BrandCarousel from '@/components/home/BrandCarousel';
 import NuevosIngresos from '@/components/home/NuevosIngresos';
 import BrandBanner from '@/components/home/BrandBanner';
 import CollectionCards from '@/components/home/CollectionCards';
@@ -10,6 +11,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <CategoryNav />
+      <BrandCarousel />
       <NuevosIngresos />
       <BrandBanner />
       <CollectionCards />
