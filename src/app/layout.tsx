@@ -50,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable}`}>
-      <body className="font-body bg-[#0A0A0A] text-white antialiased">
+      <body className="font-body text-white antialiased">
         <AnnouncementBar />
         <Navbar />
         <main>{children}</main>
