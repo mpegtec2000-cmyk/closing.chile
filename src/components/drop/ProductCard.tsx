@@ -12,6 +12,7 @@ type Product = {
   vendidos?: number;
   imagen: string | null;
   categoria: string;
+  talla?: string;
 };
 
 export default function ProductCard({
@@ -68,7 +69,7 @@ export default function ProductCard({
               <circle cx="7" cy="7" r="1.5" fill="currentColor" />
             </svg>
             <span className="text-xs text-white mt-2 tracking-widest uppercase">
-              {categoria}
+              {categoria} {producto.talla ? `· ${producto.talla}` : ""}
             </span>
           </div>
         )}
