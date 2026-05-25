@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { subscribeToNewsletter } from '@/app/actions';
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('');
@@ -12,9 +13,14 @@ export default function NewsletterSignup() {
     e.preventDefault();
     if (!email) return;
     setStatus('loading');
-    // TODO: wire to Supabase newsletter table
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus('success');
+    
+    const result = await subscribeToNewsletter(email);
+    
+    if (result.success) {
+      setStatus('success');
+    } else {
+      setStatus('error');
+    }
   }
 
   return (
