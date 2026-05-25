@@ -66,10 +66,14 @@ export default function Footer() {
         {/* Top row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <span className="font-display text-3xl text-white tracking-[0.15em] block mb-4">
-              CLOSING<span className="text-gold">®</span>
-            </span>
+          <div className="col-span-1 md:col-span-4 lg:col-span-3">
+            <Link href="/" className="inline-block mb-6">
+              <img 
+                src="/logo.jpg" 
+                alt="CLOSING Logo" 
+                className="h-12 w-auto object-contain brightness-90 hover:brightness-110 transition-all duration-300"
+              />
+            </Link>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
               Ropa americana curada con propósito. Streetwear auténtico para
               quienes viven sin filtros.

@@ -56,9 +56,11 @@ export default function Navbar() {
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group">
-            <span className="font-display text-2xl text-white tracking-[0.15em] group-hover:text-gold transition-colors duration-300">
-              CLOSING<span className="text-gold">®</span>
-            </span>
+            <img 
+              src="/logo.jpg" 
+              alt="CLOSING Logo" 
+              className="h-10 md:h-12 w-auto object-contain brightness-90 group-hover:brightness-110 transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -160,9 +162,11 @@ export default function Navbar() {
               className="fixed right-0 top-0 bottom-0 z-50 w-80 bg-[#0f0f0f] border-l border-white/10 p-8 flex flex-col"
             >
               <div className="flex items-center justify-between mb-10">
-                <span className="font-display text-xl text-white tracking-widest">
-                  CLOSING<span className="text-gold">®</span>
-                </span>
+                <img 
+                  src="/logo.jpg" 
+                  alt="CLOSING Logo" 
+                  className="h-8 w-auto object-contain"
+                />
                 <button
                   onClick={() => setMobileOpen(false)}
                   aria-label="Cerrar menú"
