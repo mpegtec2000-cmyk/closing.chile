@@ -95,7 +95,7 @@ export default function HomePage() {
     setItems((prev) =>
       prev.map((p) =>
         p.id === producto.id && p.stock > 0
-          ? { ...p, stock: p.stock - 1, vendidos: p.vendidos + 1 }
+          ? { ...p, stock: p.stock - 1, vendidos: (p.vendidos ?? 0) + 1 }
           : p
       )
     );
