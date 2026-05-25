@@ -69,7 +69,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`relative px-3 py-1.5 text-[11px] font-original font-bold tracking-[0.12em] uppercase transition-colors duration-200 group ${
+                className={`relative px-3 py-1.5 text-[11px] font-original font-extrabold tracking-[0.12em] uppercase transition-colors duration-200 group ${
                   link.sale
                     ? 'text-red-400 hover:text-red-300'
                     : link.highlight
@@ -187,7 +187,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`block py-3 text-sm font-original font-bold tracking-widest uppercase border-b border-white/5 transition-colors ${
+                      className={`block py-3 text-sm font-original font-extrabold tracking-widest uppercase border-b border-white/5 transition-colors ${
                         link.sale
                           ? 'text-red-400'
                           : link.highlight
