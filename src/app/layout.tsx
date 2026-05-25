@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bebas_Neue, DM_Sans, Syne } from 'next/font/google';
+import { Bebas_Neue, DM_Sans, Permanent_Marker } from 'next/font/google';
 import './globals.css';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Navbar from '@/components/layout/Navbar';
@@ -19,9 +19,10 @@ const dmSans = DM_Sans({
   display: 'swap',
 });
 
-const syne = Syne({
+const permanentMarker = Permanent_Marker({
+  weight: '400',
   subsets: ['latin'],
-  variable: '--font-syne',
+  variable: '--font-syne', // keeping variable name to avoid changing tailwind
   display: 'swap',
 });
 
@@ -55,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable} ${syne.variable}`}>
+    <html lang="es-CL" className={`${bebasNeue.variable} ${dmSans.variable} ${permanentMarker.variable}`}>
       <body className="font-body text-white antialiased relative">
         {/* Background Video */}
         <video
