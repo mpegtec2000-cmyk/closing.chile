@@ -57,7 +57,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group">
             <img 
-              src="/logo.png" 
+              src="/logo new.svg" 
               alt="CLOSING Logo" 
               className="h-16 md:h-20 w-auto object-contain brightness-90 group-hover:brightness-110 transition-all duration-300 animate-pulse drop-shadow-xl"
             />
@@ -163,7 +163,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-10">
                 <img 
-                  src="/logo.png" 
+                  src="/logo new.svg" 
                   alt="CLOSING Logo" 
                   className="h-12 w-auto object-contain animate-pulse drop-shadow-md"
                 />
