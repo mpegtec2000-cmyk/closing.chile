@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────── */
+:root {
+  --color-negro: #0a0a0a;
+  --color-gold: #c9a84c;
+  --color-gold-light: #dfc06a;
+  --color-crema: #f5f0e8;
+  --color-surface: #111111;
+  --color-border: rgba(255, 255, 255, 0.06);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+/* ─── Base Reset ─────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-negro);
+    color: #ffffff;
+    font-family: var(--font-body), 'DM Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: #000000;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+  }
+}
+
+/* ─── Utility Classes ────────────────────────────────────── */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), 'Bebas Neue', 'Impact', sans-serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), 'DM Sans', system-ui, sans-serif;
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+
+  .text-crema {
+    color: var(--color-crema);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Announcement bar offset for sticky navbar */
+  .pt-announcement {
+    padding-top: 2rem; /* 8 = announcement bar height */
+  }
+}
+
+/* ─── Component Styles ───────────────────────────────────── */
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold text-black px-8 py-4 text-sm font-semibold tracking-[0.15em] uppercase transition-all duration-300;
+  }
+
+  .btn-gold:hover {
+    background-color: var(--color-gold-light);
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.35);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 text-sm font-medium tracking-[0.12em] uppercase transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply border-gold text-gold;
+  }
+
+  .card-product {
+    @apply relative group cursor-pointer;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl text-white tracking-widest;
+  }
+
+  .section-eyebrow {
+    @apply text-gold text-xs font-medium tracking-[0.3em] uppercase;
+  }
+}
