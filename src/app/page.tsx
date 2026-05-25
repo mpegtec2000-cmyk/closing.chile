@@ -132,7 +132,7 @@ export default function HomePage() {
           Drop Activo
         </div>
         <h1 className="font-original font-extrabold text-5xl md:text-7xl text-white mb-4 tracking-wider drop-shadow-lg">
-          DROP 001
+          DROP 2026
         </h1>
         <p className="font-original text-white/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
           Piezas únicas. Filtra lo que buscas y asegura tu prenda antes que se agote.
